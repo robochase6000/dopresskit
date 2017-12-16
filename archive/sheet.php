@@ -488,20 +488,6 @@ if( defined("GAME_HISTORY") ) {
 	echo '<p>'. GAME_HISTORY .'</p>';
 }
 
-for( $i = 0; $i < count($histories); $i++ ) {
-	$header = $text ="";
-
-	foreach( $histories[$i]['history']->children() as $child )
-	{
-		if( $child->getName() == "header" ) {
-			$header = $child;
-		} else if( $child->getName() == "text" ) {
-			$text = $child;
-		}
-	}
-	echo '<strong>'.$header.'</strong><p>'.$text.'</p>';
-}
-
 echo '							<h2>'. tl('Features'). '</h2>
 							<ul>';
 
